@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	telebot "gopkg.in/telebot.v3"
+	"log"
 	"os"
 	"time"
-	"log"
 )
 
 var (
@@ -35,10 +35,17 @@ to quickly create a Cobra application.`,
 			Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
 		})
 
-		if err !=nil {
+		if err != nil {
 			log.Fatalf("Please check TELE_TOKEN env variable. %s", err)
 			return
 		}
+
+		ptbot.Handle(telebot.OnText, func(m telebot.Context) error {
+			log.Print(m.Message(), Payload, m.Text())
+			return err
+		})
+
+		ptbot.Start()
 
 	},
 }

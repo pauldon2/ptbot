@@ -1,13 +1,18 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"fmt"
-
 	"github.com/spf13/cobra"
+	telebot "gopkg.in/telebot.v3"
+	"os"
+)
+
+var (
+	// TeleToken bot
+	TeleToken = os.Getenv("TELE_TOKEN")
 )
 
 // ptbotCmd represents the ptbot command
@@ -21,7 +26,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("ptbot called")
+		fmt.Println("ptbot %s started", appVersion)
 	},
 }
 

@@ -18,7 +18,7 @@ get:
 build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o ${APP} -ldflags "-X="github.com/pauldon2/ptbot/cmd.appVersion=${VERSION}
 
-image: 
+image: format get build
 	docker buildx build --platform ${TARGETOS}/${TARGETARCH} . -t ${REGESTRY}${APP}:${VERSION}-${TARGETOS}
 
 push:

@@ -7,7 +7,8 @@ TARGETARCH=amd64
 #
 VERSION=v1.0.3
 #
-REGESTRY=gcr.io/gke-test-416709/
+#REGISTRY=gcr.io/gke-test-416709/
+REGISTRY=pauldon/
 
 format: 
 	gofmt -s -w ./
@@ -19,11 +20,11 @@ build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o ${APP} -ldflags "-X="github.com/pauldon2/ptbot/cmd.appVersion=${VERSION}
 
 image: format get build
-	docker buildx build --platform ${TARGETOS}/${TARGETARCH} . -t ${REGESTRY}${APP}:${VERSION}-${TARGETOS}
+	docker buildx build --platform ${TARGETOS}/${TARGETARCH} . -t ${REGISTRY}${APP}:${VERSION}-${TARGETOS}
 
 push:
-	docker push ${REGESTRY}${APP}:${VERSION}-${TARGETOS}
+	docker push ${REGISTRY}${APP}:${VERSION}-${TARGETOS}
 	
 clean: 
 	rm -rf ${APP}
-	docker rmi ${REGESTRY}${APP}:${VERSION}-${TARGETOS}
+	docker rmi ${REGISTRY}${APP}:${VERSION}-${TARGETOS}

@@ -8,6 +8,7 @@ image:
   repository: pauldon
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1.0.3-linux"
+  arch: "amd64"
 
 secret:
   name: "ptbot"

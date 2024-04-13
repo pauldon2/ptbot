@@ -1,8 +1,7 @@
-FROM quay.io/projectquay/golang:1.20
-
+FROM alpine:3.19.1
 
 WORKDIR /
-COPY ./ptbot .
-ENTRYPOINT ["./ptbot"]
 
-
+COPY ptbot .
+#COPY --from=alpine:latest /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+ENTRYPOINT ["./ptbot", "start"]

@@ -6,7 +6,6 @@ replicaCount: 1
 
 image:
   repository: pauldon
-  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1.0.3-linux"
 

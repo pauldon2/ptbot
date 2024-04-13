@@ -18,5 +18,5 @@
 # vendor/
 
 # Go workspace file
-ptbot
+ptbot.bin
 go.work

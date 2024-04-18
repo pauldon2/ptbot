@@ -50,4 +50,4 @@ jobs:
         git config user.name github-actions
         git config user.email github-actions@github.com
         git commit -am "update version $VERSION"
-        git push -u https://pauldon2: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@github.com/pauldon2/ptbot main
+        git push -u https://pauldon2:secrets.PTBOT_PUSH_TOKEN@github.com/pauldon2/ptbot main

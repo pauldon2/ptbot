@@ -2,7 +2,7 @@ FROM alpine:3.19.1
 
 
 WORKDIR /
-COPY ./ptbot.bin .
+COPY ./ptbot .
 ENTRYPOINT ["./ptbot.bin"]
 
 

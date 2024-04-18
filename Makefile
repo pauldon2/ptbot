@@ -8,7 +8,8 @@ TARGETARCH=amd64
 VERSION=v1.0.3
 #
 #REGISTRY=gcr.io/gke-test-416709/
-REGISTRY=pauldon/
+#REGISTRY=pauldon/
+REGISTRY=ghcr.io/pauldon2/
 
 format: 
 	gofmt -s -w ./

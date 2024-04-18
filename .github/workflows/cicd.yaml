@@ -20,8 +20,10 @@ jobs:
       - name: Login to GIT HUB
         uses: docker/login-action@v3
         with:
+          registry: ghcr.io
+#          username: ${{ github.actor }}
           username: ${{ vars.PTBOT_USERNAME }}
-          password: ${{ secrets.PTBOT_REGISTRY_TOKEN }}
+          password: ${{ secrets.PTBOT_REGISTRY_TOKEN  }}
 
       - name: Build image
         run: make image

@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   repository: pauldon
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.1-d2d6fe3"
+  tag: "v0.0.2-4e7e014"
   arch: "amd64"
 secret:
   name: "ptbot"

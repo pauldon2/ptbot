@@ -8,6 +8,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.0.1-d2d6fe3"
   arch: "amd64"
+  os: "linux"
 secret:
   name: "ptbot"
   env: "TELE_TOKEN"

@@ -19,13 +19,13 @@ format:
 get:
 	go get
 
-showenv:
-	printenv
-
 build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o ${APP} -ldflags "-X="github.com/pauldon2/ptbot/cmd.appVersion=${VERSION}
 
-image: showenv format get build
+image: format get build
+	printenv
+	echo "${TARGETOS}"
+	echo "${TARGETARCH}"
 	docker buildx build --platform ${TARGETOS}/${TARGETARCH} . -t ${REGISTRY}${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 push:

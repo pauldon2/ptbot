@@ -26,6 +26,7 @@ pipeline {
             steps {
                 echo "Building image started"
                 sh "printenv"
+                sh "cat Makefile"
                 sh "make image"
             }
         }

@@ -3,12 +3,8 @@ pipeline {
 
     parameters {
         choice(name: 'OS', choices: ['linux', 'darwin', 'windows'], description: 'OS')
-    }
-
-    parameters {
         choice(name: 'ARCH', choices: ['amd64', 'arm', '386'], description: 'ARCH')
     }
-
 
     environment {
         REPO = 'https://github.com/pauldon2/ptbot'

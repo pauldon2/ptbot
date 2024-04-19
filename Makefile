@@ -1,9 +1,9 @@
 #
 APP=ptbot
 #posible OS: linux,darwin,windows
-TARGETOS=linux
+#TARGETOS=linux
 #posible ARCH: amd64,arm,386
-TARGETARCH=amd64 
+#TARGETARCH=amd64 
 #
 #VERSION=v1.0.3
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)

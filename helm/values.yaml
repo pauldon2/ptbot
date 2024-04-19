@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   repository: pauldon
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.2-4e7e014"
+  tag: "v0.0.2-662a376"
   arch: "amd64"
   os: "linux"
 secret:

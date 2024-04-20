@@ -25,8 +25,6 @@ pipeline {
         stage('image') {
             steps {
                 echo "Building image started"
-                sh "printenv"
-                sh "cat Makefile"
                 sh "make image"
             }
         }
@@ -50,9 +48,7 @@ pipeline {
             cleanWs(cleanWhenNotBuilt: false,
                     deleteDirs: true,
                     disableDeferredWipeout: true,
-                    notFailBuild: true,
-                    patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
-                               [pattern: '.propsfile', type: 'EXCLUDE']])
+                    notFailBuild: true
         }
     }
 }

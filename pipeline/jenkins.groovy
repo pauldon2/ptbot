@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         REPO = 'https://github.com/pauldon2/ptbot'
-        BRANCH = 'develop'
+        BRANCH = 'jenkins'
         GITHUB = credentials('github')
         TARGETARCH = "${params.ARCH}"
         TARGETOS = "${params.OS}"

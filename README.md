@@ -15,3 +15,6 @@ go build -ldflags "-X="github.com/pauldon2/ptbot/cmd.appVersion=v1.0.2
 export TELE_TOKEN\
 ./ptbot start
 
+Workflow of changes\
+\
+![Image](./Task_6_1.jpg)

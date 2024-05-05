@@ -13,7 +13,6 @@ VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HE
 #REGISTRY=pauldon/
 REGISTRY=ghcr.io/pauldon2/
 
-
 format: 
 	gofmt -s -w ./
 

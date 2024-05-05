@@ -41,7 +41,7 @@ jobs:
       with:
         fetch-depth: 0 
 
-    - run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+    - run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)-linux-amd64" >> $GITHUB_ENV
 
     - uses: mikefarah/yq@master
       with:
@@ -51,4 +51,4 @@ jobs:
         git config user.name github-actions
         git config user.email github-actions@github.com
         git commit -am "update version $VERSION"
-        git push
+        git push origin/main

@@ -4,10 +4,10 @@
 
 replicaCount: 1
 image:
-#  repository: pauldon
+  #  repository: pauldon
   repository: ghcr.io/pauldon2
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.3-d4a21f6"
+  tag: "v0.0.3-a3af940"
 secret:
   name: "ptbot"
   env: "TELE_TOKEN"

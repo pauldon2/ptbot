@@ -7,7 +7,7 @@ image:
   #  repository: pauldon
   repository: ghcr.io/pauldon2
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.3-a3af940"
+  tag: "v0.0.3-8ed512d-linux-amd64"
 secret:
   name: "ptbot"
   env: "TELE_TOKEN"
